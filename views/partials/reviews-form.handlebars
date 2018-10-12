@@ -1,0 +1,31 @@
+<!-- views/partials/reviews-form.handlebars -->
+
+
+    <!-- <legend>Create Recipe</legend> -->
+    <!-- TITLE -->
+
+    <div class="form-group input-field col s6">
+        <input class="validate" id="review-title" type="text" name="title" value="{{review.title}}" />
+        <label for="review-title">Recipe Name</label>
+    </div>
+
+    <!-- MOVIE TITLE -->
+    <div class="form-group input-field col s6">
+        <input class="validate" id="movie-title" type="text" name="movieTitle" value="{{review.movieTitle}}" />
+        <label for="movie-title">Author Name</label>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="form-group input-field col s12">
+        <textarea class="materialize-textarea" id="review-description" name="description"/>{{review.description}}</textarea>
+        <label for="review-description">Description</label>
+    </div>
+
+    <div class="input-field col s12">
+        <select name="difficulty" class="browser-default">
+            <option value="" disabled selected>Choose your difficulty</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+        </select>
+    </div>

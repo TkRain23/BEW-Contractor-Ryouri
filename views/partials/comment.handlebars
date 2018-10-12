@@ -1,0 +1,19 @@
+<!-- views/partials/comment.handlebars -->
+
+
+    <div class="row">
+   <div class="col s12">
+     <div class="card-panel white">
+       <span class="white-text">
+           <p class="card-title" style="color: black;">User: {{this.title}}</p>
+       <p class="card-text" style="color: black;">Comment: {{this.content}}</p>
+       <p><form method="POST" action="/reviews/comments/{{this._id}}?_method=DELETE">
+           <button class="btn waves-effect waves-teal" type="submit" type="submit">Delete</button>
+       </form></p>
+
+       </span>
+     </div>
+   </div>
+
+
+    <!-- Delete link -->

@@ -1,0 +1,13 @@
+<h1>Recipes</h1>
+
+<!-- <a href="/reviews/new">New Recipe</a> -->
+
+<div class="row">
+    {{#each reviews}}
+    <div class="col-sm-3">
+        <h3><a href="/reviews/{{this._id}}">{{this.title}}</a></h3>
+        <h5>By: {{this.movieTitle}}</h5>
+        <p>Difficulty: {{this.difficulty}}</p>
+    </div>
+    {{/each}}
+</div>

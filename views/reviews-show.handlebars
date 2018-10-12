@@ -1,0 +1,24 @@
+<br>
+<a href="/">Back to Home</a>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <h2>{{review.title}}</h2>
+    <h4>By: {{review.movieTitle}}</h4>
+    <p>{{review.description}}</p>
+
+    <p><form action="/reviews/{{review._id}}/edit">
+        <button class="btn btn-primary" type="submit">Edit</button>
+    </form>
+    </p>
+    <p><form method="POST" action="/reviews/{{review._id}}?_method=DELETE">
+        <button class="btn btn-primary" type="submit">Delete</button>
+    </form></p>
+    <hr>
+    <!--Comment Form-->
+    {{> comment-form}}
+
+    {{#each comments}}
+      {{> comment}}
+    {{/each}}
+  </div>
+</div>
