@@ -10,8 +10,14 @@
 
     <!-- RECIPE TITLE -->
     <div class="form-group">
-        <label for="movie-title">Recipe Author</label><br>
-        <input class="form-control input-lg"id="movie-title" type="text" name="movieTitle" value="{{review.movieTitle}}" />
+        <label for="recipe-title">Recipe Author</label><br>
+        <input class="form-control input-lg"id="recipe-title" type="text" name="recipeTitle" value="{{review.recipeTitle}}" />
+    </div>
+
+    <!-- SERVING SIZE -->
+    <div class="form-group">
+        <label for="serving-size">Serving Size</label><br>
+        <input class="form-control input-lg"id="serving-size" type="text" name="servingSize" value="{{review.servingSize}}" />
     </div>
 
     <!-- DESCRIPTION -->
@@ -22,7 +28,7 @@
 
     <!-- RATING -->
     <div class="form-group">
-        <label for="movie-rating">Recipe Difficulty</label>
+        <label for="recipe-difficulty">Recipe Difficulty</label>
         <select name="difficulty">
             <option value="" disabled selected>Choose your difficulty</option>
             <option value="Easy">Easy</option>

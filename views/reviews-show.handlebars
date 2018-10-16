@@ -3,8 +3,9 @@
 <div class="row" style="margin-top: 10px;">
   <div class="col-sm-12 col-sm-offset-3">
     <h1>{{review.title}}</h1>
-    <h4 style="margin-left: 45px">Written by: {{review.movieTitle}}</h4>
+    <h4 style="margin-left: 45px">Written by: {{review.recipeTitle}}</h4>
     <hr>
+    <p>Serving Size: {{review.servingSize}}</p>
     <p>Description: {{review.description}}</p>
     <div class="row">
     <form action="/reviews/{{review._id}}/edit">

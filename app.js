@@ -8,7 +8,7 @@ const Review = require('./models/review')
 app.use(methodOverride('_method'))
 
 var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/rotten-potatoes');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/ryouri');
 
 // const mongoose = require('mongoose');
 // mongoose.connect('mongodb://localhost/rotten-potatoes', { useMongoClient: true });
