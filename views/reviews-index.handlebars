@@ -1,13 +1,14 @@
-<h1>Recipes</h1>
-
-<!-- <a href="/reviews/new">New Recipe</a> -->
+<br>
+<h1>Most Recent Recipes</h1>
+<hr>
+<br>
 
 <div class="row">
     {{#each reviews}}
     <div class="col-sm-3">
-        <h3><a href="/reviews/{{this._id}}">{{this.title}}</a></h3>
+        <h2><a href="/reviews/{{this._id}}">{{this.title}}</a></h2>
         <h5>By: {{this.movieTitle}}</h5>
-        <p>Difficulty: {{this.difficulty}}</p>
+        <small>Difficulty: {{this.difficulty}}</small>
     </div>
     {{/each}}
 </div>

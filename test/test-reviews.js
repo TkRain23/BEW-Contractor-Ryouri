@@ -21,4 +21,10 @@ describe('Reviews', ()  => {
         });
   });
 
+  // TEST NEW
+  // TEST CREATE
+  // TEST SHOW
+  // TEST EDIT
+  // TEST UPDATE
+  // TEST DELETE
 });

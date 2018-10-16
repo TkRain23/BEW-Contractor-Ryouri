@@ -1,31 +1,33 @@
 <!-- views/partials/reviews-form.handlebars -->
+<br>
 
-
-    <!-- <legend>Create Recipe</legend> -->
-    <!-- TITLE -->
-
-    <div class="form-group input-field col s6">
-        <input class="validate" id="review-title" type="text" name="title" value="{{review.title}}" />
-        <label for="review-title">Recipe Name</label>
+<fieldset>
+    <legend>Edit Recipe</legend>
+    <div class="form-group">
+        <label for="review-title">Recipe Title</label><br>
+        <input class="form-control input-lg"id="review-title" type="text" name="title" value="{{review.title}}" />
     </div>
 
-    <!-- MOVIE TITLE -->
-    <div class="form-group input-field col s6">
-        <input class="validate" id="movie-title" type="text" name="movieTitle" value="{{review.movieTitle}}" />
-        <label for="movie-title">Author Name</label>
+    <!-- RECIPE TITLE -->
+    <div class="form-group">
+        <label for="movie-title">Recipe Author</label><br>
+        <input class="form-control input-lg"id="movie-title" type="text" name="movieTitle" value="{{review.movieTitle}}" />
     </div>
 
     <!-- DESCRIPTION -->
-    <div class="form-group input-field col s12">
-        <textarea class="materialize-textarea" id="review-description" name="description"/>{{review.description}}</textarea>
-        <label for="review-description">Description</label>
+    <div class="form-group">
+        <label for="review-description">Description</label><br>
+        <textarea class="form-control input-lg"id="review-description" name="description" rows="10" />{{review.description}}</textarea>
     </div>
 
-    <div class="input-field col s12">
-        <select name="difficulty" class="browser-default">
+    <!-- RATING -->
+    <div class="form-group">
+        <label for="movie-rating">Recipe Difficulty</label>
+        <select name="difficulty">
             <option value="" disabled selected>Choose your difficulty</option>
             <option value="Easy">Easy</option>
             <option value="Medium">Medium</option>
             <option value="Hard">Hard</option>
         </select>
     </div>
+</fieldset>

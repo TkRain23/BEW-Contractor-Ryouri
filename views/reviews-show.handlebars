@@ -1,22 +1,23 @@
 <br>
 <a href="/">Back to Home</a>
-<div class="row">
-  <div class="col-sm-6 col-sm-offset-3">
-    <h2>{{review.title}}</h2>
-    <h4>By: {{review.movieTitle}}</h4>
-    <p>{{review.description}}</p>
-
-    <p><form action="/reviews/{{review._id}}/edit">
-        <button class="btn btn-primary" type="submit">Edit</button>
+<div class="row" style="margin-top: 10px;">
+  <div class="col-sm-12 col-sm-offset-3">
+    <h1>{{review.title}}</h1>
+    <h4 style="margin-left: 45px">Written by: {{review.movieTitle}}</h4>
+    <hr>
+    <p>Description: {{review.description}}</p>
+    <div class="row">
+    <form action="/reviews/{{review._id}}/edit">
+        <button style="margin-left:15px;" class="btn btn-primary" type="submit">Edit</button>
     </form>
-    </p>
-    <p><form method="POST" action="/reviews/{{review._id}}?_method=DELETE">
-        <button class="btn btn-primary" type="submit">Delete</button>
-    </form></p>
+    <form method="POST" action="/reviews/{{review._id}}?_method=DELETE">
+        <button style="margin-left:15px;" class="btn btn-primary" type="submit">Delete</button>
+    </form>
+    </div>
     <hr>
     <!--Comment Form-->
     {{> comment-form}}
-
+    <hr>
     {{#each comments}}
       {{> comment}}
     {{/each}}

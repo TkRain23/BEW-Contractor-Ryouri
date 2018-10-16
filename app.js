@@ -4,10 +4,6 @@ const app = express()
 const Comment = require('./models/comment')
 const Review = require('./models/review')
 
-const port = process.env.PORT || 3000;
-app.listen(port);
-
-
 // override with POST having ?_method=DELETE or ?_method=PUT
 app.use(methodOverride('_method'))
 
