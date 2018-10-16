@@ -4,22 +4,14 @@ const app = express()
 const Comment = require('./models/comment')
 const Review = require('./models/review')
 
-// override with POST having ?_method=DELETE or ?_method=PUT
 app.use(methodOverride('_method'))
 
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/ryouri');
 
-// const mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/rotten-potatoes', { useMongoClient: true });
 
 const bodyParser = require('body-parser');
-// let reviews = [
-//     { title: "Great Review" },
-//     { title: "Next Review" }
-// ]
 
-// app.js
 var exphbs = require('express-handlebars');
 
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
@@ -118,3 +110,5 @@ comments(app);
 app.listen(process.env.PORT || 3000, () => {
   console.log('App listening on port 3000!')
 })
+
+module.exports = app;

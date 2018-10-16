@@ -1,13 +1,15 @@
 <!-- views/partials/comment.handlebars -->
-<div class="card" style="width: 100%;" >
-  <div class="card-header">
-    {{this.title}}
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">{{this.content}}</li>
-  </ul>
+<div class="card" style="width: 100%;">
+    <div class="card-header">
+        {{this.title}}
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{this.content}}</li>
+    </ul>
 </div>
 <!-- Delete link -->
-    <p><form method="POST" action="/reviews/comments/{{this._id}}?_method=DELETE">
+<p>
+    <form method="POST" action="/reviews/comments/{{this._id}}?_method=DELETE">
         <button class="btn btn-link" type="submit">delete</button>
-    </form></p>
+    </form>
+</p>
